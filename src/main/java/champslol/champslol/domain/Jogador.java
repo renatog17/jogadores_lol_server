@@ -1,13 +1,12 @@
 package champslol.champslol.domain;
 
-import java.util.ArrayList;
+import java.util.List;
 
 import champslol.champslol.controller.dto.FormJogador;
 import champslol.champslol.controller.dto.enums.Divisao;
 import champslol.champslol.controller.dto.enums.Role;
 import champslol.champslol.controller.dto.enums.Tier;
 import jakarta.persistence.ElementCollection;
-import jakarta.persistence.Embedded;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
@@ -39,7 +38,7 @@ public class Jogador {
 	private Tier tier;
 	private String imagem;
 	@ElementCollection
-	private ArrayList<String> campeoes;
+	private List<String> campeoes;
 	@Enumerated(EnumType.STRING)
 	private Role rolePrimaria;
 	@Enumerated(EnumType.STRING)
